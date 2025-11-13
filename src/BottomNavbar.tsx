@@ -1,10 +1,9 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
-import { useAuth } from '../services/AuthContext';
 import { signOut } from 'firebase/auth';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { auth } from '../firebaseConfig';
-import { useSafeAreaInsets } from 'react-native-safe-area-context'; 
+import { useAuth } from '../services/AuthContext';
 
 export default function BottomNavbar() {
   const router = useRouter();

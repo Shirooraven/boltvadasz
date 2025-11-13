@@ -1,9 +1,9 @@
 import React from "react";
-import { View, Text, ImageBackground } from "react-native";
-import { styles } from "../../styles/styles";
-import BottomNavbar from "../BottomNavbar";
+import { ImageBackground, Text, View } from "react-native";
 import { useAuth } from "../../services/AuthContext";
-import AuthGuard from "../components/AuthGuard";
+import BottomNavbar from "../../src/BottomNavbar";
+import AuthGuard from "../../src/components/AuthGuard";
+import { styles } from "../../styles/styles";
 
 export default function Home() {
   const { user } = useAuth();

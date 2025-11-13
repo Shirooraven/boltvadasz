@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { View,Text,FlatList, ActivityIndicator,Alert, ImageBackground,TouchableOpacity} from "react-native";
-import { auth, db } from "../../firebaseConfig";
-import { ref, get, child, set, remove } from "firebase/database";
-import BottomNavbar from "../BottomNavbar";
-import AuthGuard from "../components/AuthGuard";
 import { Link, useRouter } from "expo-router";
+import { child, get, ref, remove, set } from "firebase/database";
+import React, { useEffect, useState } from "react";
+import { ActivityIndicator, Alert, FlatList, ImageBackground, Text, TouchableOpacity, View } from "react-native";
+import { auth, db } from "../../firebaseConfig";
 import { buildExactMatchesForIngredients } from "../../services/buildExactMatchesForIngredients";
+import BottomNavbar from "../../src/BottomNavbar";
+import AuthGuard from "../../src/components/AuthGuard";
 import { recipesStyle as styles } from "../../styles/recipesStyle";
 
 export default function RecipesSimple() {

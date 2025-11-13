@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import {Text,TextInput,TouchableOpacity,ScrollView,KeyboardAvoidingView,Platform,ImageBackground,Alert,} from "react-native";
-import { ref, push, set } from "firebase/database";
-import { auth, db } from "../../firebaseConfig";
 import { useRouter } from "expo-router";
-import BottomNavbar from "../BottomNavbar";
-import AuthGuard from "../components/AuthGuard";
-import { styles, COLORS } from "../../styles/addRecipe";
+import { push, ref, set } from "firebase/database";
+import React, { useState } from "react";
+import { Alert, ImageBackground, KeyboardAvoidingView, Platform, ScrollView, Text, TextInput, TouchableOpacity, } from "react-native";
+import { auth, db } from "../../firebaseConfig";
+import BottomNavbar from "../../src/BottomNavbar";
+import AuthGuard from "../../src/components/AuthGuard";
+import { COLORS, styles } from "../../styles/addRecipe";
 
 export default function AddRecipe() {
   const [name, setName] = useState("");

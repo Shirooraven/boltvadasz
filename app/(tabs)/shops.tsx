@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import {
-  View,
+  ActivityIndicator,
+  FlatList,
+  ImageBackground,
+  SafeAreaView,
+  ScrollView,
   Text,
   TextInput,
-  SafeAreaView,
-  ActivityIndicator,
-  ImageBackground,
-  FlatList,
-  ScrollView,
+  View,
 } from "react-native";
+import AuthGuard from "../../src/components/AuthGuard";
+import CategoryPill from "../../src/components/CategoryPill";
+import ProductCard from "../../src/components/ProductCard";
+import StoreSwitch from "../../src/components/StoreSwitch";
+import { fetchCategories, loadProductsByCategory } from "../../src/utils/products";
 import { productBrowserStyle as styles } from "../../styles/productBrowserStyle";
-import { fetchCategories, loadProductsByCategory } from "../utils/products";
-import StoreSwitch from "../components/StoreSwitch";
-import CategoryPill from "../components/CategoryPill";
-import ProductCard from "../components/ProductCard";
-import AuthGuard from "../components/AuthGuard";
 
 export type StoreType = "tesco" | "lidl";
 

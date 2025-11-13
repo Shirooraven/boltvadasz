@@ -1,5 +1,4 @@
-import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { styles } from "../../styles/storeStyles";
 
 type Props = { store: "tesco" | "lidl"; setStore: (s: "tesco" | "lidl") => void };

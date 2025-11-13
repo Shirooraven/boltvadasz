@@ -1,5 +1,5 @@
+import { child, get, ref } from "firebase/database";
 import { db } from "../../firebaseConfig";
-import { get, ref, child } from "firebase/database";
 
 export const normalizeId = (v: string) =>
   v?.toLowerCase().replace(/\s+/g, "_").trim();

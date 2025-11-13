@@ -1,10 +1,10 @@
+import { useLocalSearchParams, useRouter } from "expo-router";
+import { child, get, ref } from "firebase/database";
 import React, { useEffect, useState } from "react";
-import { View, Text, ScrollView, ActivityIndicator, StyleSheet, Button, Alert } from "react-native";
+import { ActivityIndicator, Alert, Button, ScrollView, StyleSheet, Text, View } from "react-native";
 import { auth, db } from "../../firebaseConfig";
-import { ref, child, get } from "firebase/database";
-import BottomNavbar from "../BottomNavbar";
-import AuthGuard from "../components/AuthGuard";
-import { useLocalSearchParams, useRouter } from "expo-router"; 
+import BottomNavbar from "../../src/BottomNavbar";
+import AuthGuard from "../../src/components/AuthGuard";
 
 export default function RecipeResult() {
   const { recipeId } = useLocalSearchParams(); // paraméter itt jön
